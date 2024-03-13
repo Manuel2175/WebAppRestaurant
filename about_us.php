@@ -20,17 +20,7 @@
     include 'connection.php';
     ?>
     <main>
-        <section class="container">
-            <div class="adresbar_vak">
-                <form action="adres-naam.php" method="POST">
-                    <img id="plaatsmarker" src="img/plaatsmarker.png" alt="plaatsmaker">
-                    <input class="input" type="text" name="adres" placeholder="  Bezorgadres">
-                    <input class="input" type="text" name="naam" placeholder="  Naam:">
-                    <input id="submit" type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
-
+     
     </main>
     <?php
     include 'landingfooter.php';
