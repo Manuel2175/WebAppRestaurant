@@ -24,39 +24,53 @@
             <nav>
                 <ul>
                     <li>
-                        <div>
-                            <h1>Nacho</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Nacho</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Taco</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Taco</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Ontbijt</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Ontbijt</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Drinken</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Drinken</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Chorros</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Chorros</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Burrito</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Burrito</h1>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div>
-                            <h1>Vega</h1>
-                        </div>
+                        <a href="scroll_down.js">
+                            <div>
+                                <h1>Vega</h1>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -67,7 +81,7 @@
         </section>
     </main>
     <?php
-    include 'landingfooter.php';
+    include 'footer.php';
     ?>
 </body>
 

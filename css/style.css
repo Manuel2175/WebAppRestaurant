@@ -8,9 +8,7 @@ body {
     rgba(249, 143, 33, 1),
     rgba(255, 219, 181, 1)
   );
-  overflow-y: hidden;
   overflow-x: hidden;
-  
 }
 header {
   background-color: rgba(249, 143, 33, 1);
@@ -41,7 +39,8 @@ header ul  {
   height: 15vh;
   width: 30vw;
 }
-p {
+h1 {
+  font-size: larger;
   color: rgba(215, 25, 25, 1);
 }
 .navigatie-knoppen {
@@ -58,7 +57,7 @@ p {
 /* einde header */
 
 
-footer {
+footer img {
   height: 20vh;
   width: 100vw;
   display: flex;
@@ -117,6 +116,24 @@ footer {
   align-items: center;
 }
 .menu-items{
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
+}
+.menubalk div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 14.5vw;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 5px;
+  border-style:double;
+  color: rgba(215, 25, 25, 1);
+}
+footer{
+  height: 20vh;
+  width: 100vw;
+  background-color:rgba(19, 193, 232, 1);
 }

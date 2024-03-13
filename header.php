@@ -11,21 +11,21 @@
             <li>
                 <a href="menu.php">
                     <div class="navigatie-knoppen">
-                    <p>Menu</p>
+                    <h1>Menu</h1>
                     </div>
                 </a>
             </li>
             <li>
                 <a href="login.php">
                     <div class="navigatie-knoppen">
-                    <p>Login</p>
+                    <h1>Login</h1>
                     </div>
                 </a>
             </li>
             <li>
                 <a href="about_us.php">
                     <div class="navigatie-knoppen">
-                    <p>About us</p>
+                    <h1>About us</h1>
                     </div>
                 </a>
             </li>
