@@ -13,13 +13,13 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="index">
 
     <?php
     include 'header.php';
     include 'connection.php';
     ?>
-    <main>
+    <main >
         <section class="container">
             <div class="adresbar_vak">
                 <form action="adres-naam.php" method="POST">

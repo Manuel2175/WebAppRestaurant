@@ -1,6 +1,6 @@
 <head>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<footer>
+<footer class="standaard-footer">
     
 </footer>

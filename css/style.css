@@ -10,6 +10,9 @@ body {
   );
   overflow-x: hidden;
 }
+#index{
+  overflow-y: hidden;
+}
 header {
   background-color: rgba(249, 143, 33, 1);
   width: 100vw;
@@ -40,7 +43,7 @@ header ul  {
   width: 30vw;
 }
 h1 {
-  font-size: larger;
+  font-size: 1.5vw;
   color: rgba(215, 25, 25, 1);
 }
 .navigatie-knoppen {
@@ -61,6 +64,7 @@ footer img {
   height: 20vh;
   width: 100vw;
   display: flex;
+  justify-content: start;
 }
 #golfjes {
   height: 32.4vh;
@@ -76,7 +80,7 @@ footer img {
 .adresbar_vak {
   height: 15vh;
   width: 50vw;
-  border-radius: 20px;
+  border-radius: 5vh;
   background-image: linear-gradient(
     90deg,
     rgba(215, 25, 25, 1),
@@ -88,13 +92,13 @@ footer img {
   justify-content: space-evenly;
 }
 #plaatsmarker {
-  height: 3vh;
+  height: 4vh;
 }
 .input {
   height: 5vh;
   width: 15vw;
-  font-size: x-large;
-  border-radius: 10px;
+  font-size: 1.5vw;
+  border-radius: 5vh;
   border-style: none; 
 }
 #submit {
@@ -103,17 +107,16 @@ footer img {
   background-color: rgba(252, 171, 61, 1);
   border-style: none;
   color: rgba(215, 25, 25, 1);
-  font-size: x-large;
-  border-radius: 10px;
+  font-size: 1.5vw;
+  border-radius: 1vh;
 }
 .menubalk ul{
   height: 10vh;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(7,1fr);
-  border-color: black;
   justify-items: center;
-  align-items: center;
+  align-items: center;  
 }
 .menu-items{
   height: 100vh;
@@ -128,12 +131,14 @@ footer img {
   border-left: 0px;
   border-bottom: 0px;
   border-top: 0px;
-  border-right: 5px;
+  border-right: 0.3vw;
   border-style:double;
   color: rgba(215, 25, 25, 1);
 }
-footer{
+.standaard-footer {
   height: 20vh;
   width: 100vw;
-  background-color:rgba(19, 193, 232, 1);
+  display: flex;
+  justify-content: start;
+  background-color: aqua;
 }
