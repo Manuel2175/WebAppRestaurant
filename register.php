@@ -5,10 +5,10 @@ include('Connection.php');
 $user = $_POST['username'];
 $pass = $_POST['password'];
 
-$sql ="
+$sql = "
 INSERT INTO accounts (gebruikersnaam, wachtwoord)
   VALUES ('$user', '$pass')";
 
 
-$conn -> exec($sql);
+$conn->exec($sql);
 

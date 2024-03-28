@@ -23,7 +23,7 @@
      
     </main>
     <?php
-    include 'landingfooter.php';
+    include 'footer.php';
     ?>
 </body>
 

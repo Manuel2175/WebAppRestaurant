@@ -11,6 +11,7 @@
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -26,59 +27,69 @@
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Nacho</h1>
+                                <h3>Nacho</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Taco</h1>
+                                <h3>Taco</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Ontbijt</h1>
+                                <h3>Ontbijt</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Drinken</h1>
+                                <h3>Drinken</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Chorros</h1>
+                                <h3>Chorros</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Burrito</h1>
+                                <h3>Burrito</h3>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="scroll_down.js">
                             <div>
-                                <h1>Vega</h1>
+                                <h3>Vega</h3>
                             </div>
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
+        <form>
+            <input class="zoekbalk" method="GET" type="text" id="searchInput" name="query" placeholder="Zoek product">
+        </form>
 
-        <section class="menu-items">
+        <div id="searchResults"></div>
 
-        </section>
+        <script>
+          <?php
+          include 'zoekhulp.js'; 
+          ?>
+        </script>
+        <?php
+        include 'menu-items.php';
+        ?>
     </main>
     <?php
     include 'footer.php';

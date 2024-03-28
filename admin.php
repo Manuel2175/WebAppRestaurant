@@ -1,11 +1,16 @@
 <?php
+include 'connection.php';
+
 $productnaam = $_POST['productnaam'];
-$beschrijving = $_POST['beschrijving'];
+$categorie = $_POST['categorie'];
+$beschrijving = addslashes( $_POST['beschrijving']);
 $prijs = $_POST['prijs'];
-$dressing = $_POST['dressing'];
-$alergenen = $_POST['allergenen'];
+$afbeelding =  $_POST['afbeelding'];
+$sql = "INSERT INTO producten (categorie,productnaam, beschrijving, prijs, img) 
+VALUES ('".$categorie."','".$productnaam."', '".$beschrijving."', ".$prijs.", '".$afbeelding."')";
+$conn->exec($sql);
 
-$sql = "INSERT INTO producten (id, productnaam, beschrijving, prijs, dressing, allergenen)\n"
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Location: menu.php");
+}
 
-    . "VALUES (0, '$productnaam','$beschrijving','$prijs','$dressing' ,'$allergenen');";
-    $conn -> exec($sql);

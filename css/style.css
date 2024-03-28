@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgba(215, 25, 25, 1);
 }
 body {
   background-image: linear-gradient(
@@ -10,7 +11,8 @@ body {
   );
   overflow-x: hidden;
 }
-#index{
+
+#index {
   overflow-y: hidden;
 }
 header {
@@ -21,6 +23,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
+
 #nacho {
   height: 15vh;
   width: 20vw;
@@ -35,7 +38,7 @@ li {
 a {
   text-decoration: none;
 }
-header ul  {
+header ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -43,8 +46,7 @@ header ul  {
   width: 30vw;
 }
 h1 {
-  font-size: 1.5vw;
-  color: rgba(215, 25, 25, 1);
+  font-size: 72px;
 }
 .navigatie-knoppen {
   display: flex;
@@ -59,7 +61,6 @@ h1 {
 }
 /* einde header */
 
-
 footer img {
   height: 20vh;
   width: 100vw;
@@ -70,12 +71,12 @@ footer img {
   height: 32.4vh;
   width: 100vw;
 }
-.container{
-    height: 54vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  height: 54vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .adresbar_vak {
   height: 15vh;
@@ -99,7 +100,7 @@ footer img {
   width: 15vw;
   font-size: 1.5vw;
   border-radius: 5vh;
-  border-style: none; 
+  border-style: none;
 }
 #submit {
   height: 10vh;
@@ -110,19 +111,17 @@ footer img {
   font-size: 1.5vw;
   border-radius: 1vh;
 }
-.menubalk ul{
+
+.menubalk ul {
   height: 10vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(7, 1fr);
   justify-items: center;
-  align-items: center;  
+  align-items: center;
 }
-.menu-items{
-  height: 100vh;
-  width: 100vw;
-}
-.menubalk div{
+
+.menubalk div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,13 +131,65 @@ footer img {
   border-bottom: 0px;
   border-top: 0px;
   border-right: 0.3vw;
-  border-style:double;
+  border-style: double;
   color: rgba(215, 25, 25, 1);
 }
 .standaard-footer {
   height: 20vh;
   width: 100vw;
-  display: flex;
-  justify-content: start;
   background-color: aqua;
+}
+.menu-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  justify-items: center;
+}
+.menu-items {
+  height: 250px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgba(252, 171, 61, 1);
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.product-container {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.product-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+}
+.categorie {
+  text-align: center;
+  margin: 10px;
+}
+.bestel-knop{
+  height: 40px;
+  width: 100px; 
+}
+.bestel-nu {
+  margin-top: 20px;
+  border-radius: 50px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 161, 69, 1);
+}
+
+.zoekbalk{
+  margin: 60px ;
 }
