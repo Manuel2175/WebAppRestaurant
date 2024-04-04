@@ -2,10 +2,10 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <header>
     <img id="nacho" src="img/el_nacho.png" alt="nacho-logo">
-    <img id="mascotte" src="img/logo.png" alt="logo">
     <nav>
         <ul>
             <li>
@@ -18,6 +18,13 @@
             <li>
                 <a href="admin-page.php">
                     <div class="navigatie-knoppen">
+                        <h3>Admin</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="login.php">
+                    <div class="navigatie-knoppen">
                         <h3>Login</h3>
                     </div>
                 </a>
@@ -26,6 +33,13 @@
                 <a href="about_us.php">
                     <div class="navigatie-knoppen">
                         <h3>About us</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="winkelmandje.php">
+                    <div class="navigatie-knoppen">
+                    <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                 </a>
             </li>

@@ -10,7 +10,7 @@
           success: function (data) {
             $("#searchResults").fadeOut(100, function () {
               // Fade out the search results container
-              $(this).html(data).fadeIn(100); // Update the content and fade it back in
+              $(this).html(data).fadeIn(200); // Update the content and fade it back in
             });
           },
         });

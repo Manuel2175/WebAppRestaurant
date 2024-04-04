@@ -77,11 +77,11 @@
             </nav>
         </section>
         <form>
+            <div id="form-container">
             <input class="zoekbalk" method="GET" type="text" id="searchInput" name="query" placeholder="Zoek product">
+            </div>
         </form>
-
         <div id="searchResults"></div>
-
         <script>
           <?php
           include 'zoekhulp.js'; 
@@ -90,6 +90,7 @@
         <?php
         include 'menu-items.php';
         ?>
+
     </main>
     <?php
     include 'footer.php';

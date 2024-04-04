@@ -19,9 +19,9 @@ header {
   background-color: rgba(249, 143, 33, 1);
   width: 100vw;
   height: 15vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #nacho {
@@ -43,7 +43,7 @@ header ul {
   justify-content: space-evenly;
   align-items: center;
   height: 15vh;
-  width: 30vw;
+  width: 50vw;
 }
 h1 {
   font-size: 72px;
@@ -101,6 +101,22 @@ footer img {
   font-size: 1.5vw;
   border-radius: 5vh;
   border-style: none;
+}
+#form-container{
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoekbalk{
+  height: 5vh;
+  width: 20vw;
+  font-size: 1.5vw;
+  border-radius: 5vh;
+  border-style: none;
+  text-indent: 10px;
+
 }
 #submit {
   height: 10vh;
@@ -190,6 +206,3 @@ footer img {
   background-color: rgba(250, 161, 69, 1);
 }
 
-.zoekbalk{
-  margin: 60px ;
-}
