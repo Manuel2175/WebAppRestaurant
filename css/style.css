@@ -28,22 +28,22 @@ header {
   height: 15vh;
   width: 20vw;
 }
-#mascotte {
-  height: 15vh;
-  width: 15vw;
-}
+
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
+button{
+  border: none;
+}
 header ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 15vh;
-  width: 50vw;
+  width: 60vw;
 }
 h1 {
   font-size: 72px;
@@ -61,7 +61,7 @@ h1 {
 }
 /* einde header */
 
-footer img {
+.index-footer{
   height: 20vh;
   width: 100vw;
   display: flex;
@@ -205,4 +205,31 @@ footer img {
   justify-content: center;
   background-color: rgba(250, 161, 69, 1);
 }
+.menu-container-admin{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.menu-itemss{
+    background-color: rgba(252, 171, 61, 1);
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
 
+.standaard-footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.footer-align{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-logo{
+  height: 150px;
+}

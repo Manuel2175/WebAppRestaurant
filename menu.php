@@ -76,11 +76,11 @@
                 </ul>
             </nav>
         </section>
-        <form>
             <div id="form-container">
-            <input class="zoekbalk" method="GET" type="text" id="searchInput" name="query" placeholder="Zoek product">
+                <form action="" method="GET">
+            <input class="zoekbalk" type="text" id="searchInput" name="query" placeholder="Zoek product">
+            </form>
             </div>
-        </form>
         <div id="searchResults"></div>
         <script>
           <?php

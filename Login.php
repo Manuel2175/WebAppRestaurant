@@ -1,30 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+include 'connection.php';
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Inter:wght@100..900&family=Lato&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+$gebruikersnaam = $_POST['username'];
+$wachtwoord = $_POST['password'];
 
-<body>
+$query = $conn->prepare("SELECT * FROM accounts WHERE gebruikersnaam = :gebruikersnaam AND wachtwoord = :wachtwoord");
+$query->bindParam(':gebruikersnaam', $gebruikersnaam);
+$query->bindParam(':wachtwoord', $wachtwoord);
+$query->execute();
+$user = $query->fetch(PDO::FETCH_ASSOC);
 
-    <?php
-    include 'header.php';
-    include 'connection.php';
-    ?>
-    <main>
-     
-    </main>
-    <?php
-    include 'footer.php';
-    ?>
-</body>
+if ($user) {
+    $_SESSION['gebruikersnaam'] = $gebruikersnaam;
+    $_SESSION['rol'] = $user['rol'];
 
-</html>
+    if ($user['rol'] == 'admin') {
+        header('Location: admin-page.php');
+        exit();
+    } else {
+        header('Location: index.php');
+        exit();
+    }
+} else {
+    $_SESSION['error'] = "Ongeldige inloggegevens!";
+    header('Location: login-page.php');
+    exit();
+}
+
+
+

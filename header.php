@@ -15,20 +15,61 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a href="admin-page.php">
-                    <div class="navigatie-knoppen">
-                        <h3>Admin</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="login.php">
+            <?php
+            session_start();
+
+            // Controleer of de gebruiker is ingelogd
+            if (isset($_SESSION['gebruikersnaam'])) {
+                // Als de gebruiker is ingelogd, controleer dan of ze de rol "admin" hebben
+                if ($_SESSION['rol'] == 'admin' || $_SESSION['rol' == 'semi-admin']) {
+                    // Als de gebruiker een admin is, toon de knop voor de admin-pagina
+                    echo '<li>
+                  <a href="admin-page.php">
+                      <div class="navigatie-knoppen">
+                          <h3>Admin</h3>
+                      </div>
+                  </a>
+              </li>';
+                }
+            }
+            ?>
+            <?php
+            // Controleer of de gebruiker is ingelogd
+            if (!isset($_SESSION['gebruikersnaam'])) {
+                echo '  <li>
+                <a href="login-page.php">
                     <div class="navigatie-knoppen">
                         <h3>Login</h3>
                     </div>
                 </a>
-            </li>
+            </li>';
+            }
+            ?>
+            <?php
+            // Controleer of de gebruiker is ingelogd
+            if (isset($_SESSION['gebruikersnaam'])) {
+                echo '<li>
+                        <form action="logout.php" method="post">
+                        <button type="submit" class="navigatie-knoppen">
+                            <h3>Logout</h3>
+                        </button>
+    
+                    </form>
+                </li>';
+            }
+            ?>
+            <?php
+            // Controleer of de gebruiker is ingelogd
+            if (!isset($_SESSION['gebruikersnaam'])) {
+                echo '<li>
+        <a href="register-page.php">
+        <div class="navigatie-knoppen">
+            <h3>Register</h3>
+        </div>
+    </a>
+</li>';
+            }
+            ?>
             <li>
                 <a href="about_us.php">
                     <div class="navigatie-knoppen">
@@ -39,11 +80,11 @@
             <li>
                 <a href="winkelmandje.php">
                     <div class="navigatie-knoppen">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                 </a>
             </li>
-            
+
         </ul>
     </nav>
 </header>

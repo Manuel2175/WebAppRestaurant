@@ -83,3 +83,28 @@ function displayProducts($products)
     <?php
 }
 ?>
+<?php
+function displayProductId($products)
+{ 
+    ?>
+    <section class='menu-container-admin'>
+        <?php
+        foreach ($products as $product) {
+            ?>
+            <div class='menu-itemss'>
+                <div class='product-container'>
+                    <h2>
+                        <?php echo $product['productnaam']; ?>
+                    </h2>
+                    <p>Id:
+                        <?php echo $product['id']; ?>
+                    </p>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </section>
+    <?php
+}
+?>
