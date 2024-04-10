@@ -15,12 +15,13 @@
 </head>
 
 <body>
+
     <?php
     include 'header.php';
     include 'connection.php';
     ?>
     <main>
-    <?php
+        <?php
 
         if (isset($_SESSION['gebruikersnaam'])) {
             if ($_SESSION['rol'] == 'admin') {
@@ -35,7 +36,7 @@
                         <option value="semi-admin">semi-admin</option>
                         <option value="klant">klant</option>
                     </select>
-                    <input id="submit1" type="submit"> <!-- Changed ID to submit1 -->
+                    <input id="submit" type="submit"> <!-- Changed ID to submit1 -->
                 </form>
                 <?php
             }
@@ -76,6 +77,7 @@
         </div>
         <div id="searchResults">
             <script>
+
                 <?php
                 include 'zoekhulp-admin.js';
                 ?>

@@ -9,8 +9,8 @@ session_destroy(); // Vernietig de sessie zelf
 
 // Controleer of de sessie vernietigd is
 if(!isset($_SESSION['gebruikersnaam'])) {
-    echo 'Succesvol uitgelogd';
+echo("succesvol uitgelogd");
 } else {
     echo 'Kon niet uitloggen';
 }
-
+header("Location: index.php");

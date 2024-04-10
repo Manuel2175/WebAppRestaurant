@@ -9,7 +9,7 @@ $query = $conn->prepare("SELECT * FROM accounts WHERE gebruikersnaam = :gebruike
 $query->bindParam(':gebruikersnaam', $gebruikersnaam);
 $query->bindParam(':wachtwoord', $wachtwoord);
 $query->execute();
-$user = $query->fetch(PDO::FETCH_ASSOC);
+$user = $query->fetch();
 
 if ($user) {
     $_SESSION['gebruikersnaam'] = $gebruikersnaam;
