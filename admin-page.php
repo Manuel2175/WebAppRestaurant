@@ -78,7 +78,7 @@
                 <input class="zoekbalk" type="text" id="searchInput" name="query" placeholder="Zoek product">
             </form>
         </div>
-        <div id="searchResults">
+        <div id="searchResults"></div>
             <script>
 
                 <?php
