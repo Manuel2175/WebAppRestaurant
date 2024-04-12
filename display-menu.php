@@ -34,10 +34,11 @@ function displayProductsAndCategories($products)
                     <p>Prijs: €
                         <?php echo $product['prijs']; ?>
                     </p>
-                    <a class='bestel-knop' href='index.php'>
-                        <div class='bestel-nu'>
-                            <p>Bestel nu</p>
-                        </div>
+                    <form method="post" action="winkelmandje-toevoegen.php">
+                        <input type="hidden" name="product" value="<?php echo $product['productnaam']; ?>">
+                        <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                        <button type="submit" class="bestel-nu">Bestel nu</button>
+                    </form>
                     </a>
                 </div>
             </div>
@@ -50,7 +51,7 @@ function displayProductsAndCategories($products)
 ?>
 <?php
 function displayProducts($products)
-{ 
+{
     ?>
     <section class='menu-container'>
         <?php
@@ -85,7 +86,7 @@ function displayProducts($products)
 ?>
 <?php
 function displayProductId($products)
-{ 
+{
     ?>
     <section class='menu-container-admin'>
         <?php
@@ -98,6 +99,70 @@ function displayProductId($products)
                     </h2>
                     <p>Id:
                         <?php echo $product['id']; ?>
+                    </p>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </section>
+    <?php
+}
+?>
+<?php
+function displayProductsCard($products)
+{
+    ?>
+    <section class='menu-container'>
+        <?php
+        foreach ($products as $product) {
+            ?>
+            <div class='menu-items'>
+                <div class='product-container'>
+                    <h2>
+                        <?php echo $product['productnaam']; ?>
+                    </h2>
+                    <p>
+                        <?php echo $product['beschrijving']; ?>
+                    </p>
+                    <p>Prijs: €
+                        <?php echo $product['prijs']; ?>
+                    </p>
+                    <p>Aantal:
+                        <?php echo $product['aantal']; ?>
+                    </p>
+                    <form method="get" action="winkelmandje-delete.php">
+                        <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                        <button type="submit" class="bestel-nu">verwijder</button>
+                    </form>
+
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </section>
+    <?php
+}
+?>
+<?php
+function displayreservering($reserveringen)
+{
+    ?>
+    <section class='menu-container'>
+        <?php
+        foreach ($reserveringen as $reservering) {
+            ?>
+            <div class='menu-items'>
+                <div class='product-container'>
+                    <h2>
+                        <?php echo $reservering['naam']; ?>
+                    </h2>
+                    <p>
+                        <?php echo $reservering['datum']; ?>
+                    </p>
+                    <p>Prijs: €
+                        <?php echo $reservering['tijd']; ?>
                     </p>
                 </div>
             </div>

@@ -21,7 +21,8 @@
             // Controleer of de gebruiker is ingelogd
             if (isset($_SESSION['gebruikersnaam'])) {
                 // Als de gebruiker is ingelogd, controleer dan of ze de rol "admin" hebben
-                if ($_SESSION['rol'] == 'admin' || $_SESSION['rol' == 'semi-admin']) {
+                if ($_SESSION['rol'] == 'admin' or $_SESSION['rol'] == 'semi-admin') {
+            
                     // Als de gebruiker een admin is, toon de knop voor de admin-pagina
                     echo '<li>
                   <a href="admin-page.php">
@@ -71,9 +72,9 @@
             }
             ?>
             <li>
-                <a href="about_us.php">
+                <a href="reservering.php">
                     <div class="navigatie-knoppen">
-                        <h3>About us</h3>
+                        <h3>Reservering</h3>
                     </div>
                 </a>
             </li>

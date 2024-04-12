@@ -20,7 +20,8 @@
     include 'header.php';
     include 'connection.php';
     ?>
-    <main>
+    <main >
+        <section>
         <?php
 
         if (isset($_SESSION['gebruikersnaam'])) {
@@ -29,14 +30,16 @@
                 <h1>Rol geven</h1>
                 <form action="give-role.php" method="POST">
                     <select class="input" name="gebruikersnaam" id="">
-                        <option class="input" value="manuel">manuel</option>
+                      <?php
+                        include('gebruikersnaam.php');
+                      ?>
                     </select>
                     <select class="input" name="rol">
                         <option value="admin">admin</option>
                         <option value="semi-admin">semi-admin</option>
                         <option value="klant">klant</option>
                     </select>
-                    <input id="submit" type="submit"> <!-- Changed ID to submit1 -->
+                    <input id="submit" type="submit">
                 </form>
                 <?php
             }
@@ -85,6 +88,11 @@
             <?php
             include 'admin-items.php';
             ?>
+            <h1>Reservatie's</h1>
+            <?php
+            include ('reservatie-display.php');
+            ?>
+            </section>
     </main>
     <?php
     include ('footer.php');

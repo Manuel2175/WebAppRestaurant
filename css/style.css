@@ -233,3 +233,27 @@ h1 {
 .footer-logo{
   height: 150px;
 }
+.section{
+  display: flex;
+  flex-direction: column;
+}
+
+#winkelmandje-container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.reserveren{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100vw;
+  height: 55vh;
+  justify-content: center;
+  align-items: center;
+}
+.reserveren-container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}

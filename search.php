@@ -17,7 +17,6 @@ include 'display-menu.php';
     if ($stmt->rowCount() > 0) {
         // Call the displayProducts function to show the search results
         displayProducts($products);
-        header("location: menu.php");
     } else {
         echo "Geen resultaten gevonden";
     }
