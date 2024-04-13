@@ -164,6 +164,10 @@ function displayreservering($reserveringen)
                     <p>Prijs: €
                         <?php echo $reservering['tijd']; ?>
                     </p>
+                    <form method="get" action="reservering-delete.php">
+                        <input type="hidden" name="naam" value="<?php echo $reservering['naam']; ?>">
+                        <button type="submit" class="bestel-nu">verwijder</button>
+                    </form>
                 </div>
             </div>
             <?php

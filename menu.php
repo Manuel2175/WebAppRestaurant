@@ -20,76 +20,20 @@
     include 'header.php';
     include 'connection.php';
     ?>
-    <main>
-        <section class="menubalk">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Nacho</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Taco</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Ontbijt</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Drinken</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Chorros</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Burrito</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="scroll_down.js">
-                            <div>
-                                <h3>Vega</h3>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-            <div id="form-container">
-                <form action="" method="GET">
+    <div id="form-container">
+        <form action="" method="GET">
             <input class="zoekbalk" type="text" id="searchInput" name="query" placeholder="Zoek product">
-            </form>
-            </div>
-        <div id="searchResults"></div>
-        <script>
-          <?php
-          include 'zoekhulp.js'; 
-          ?>
-        </script>
+        </form>
+    </div>
+    <div id="searchResults"></div>
+    <script>
         <?php
-        include 'menu-items.php';
+        include 'zoekhulp.js';
         ?>
+    </script>
+    <?php
+    include 'menu-items.php';
+    ?>
 
     </main>
     <?php
