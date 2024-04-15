@@ -118,6 +118,8 @@ function displayProductsCard($products)
         foreach ($products as $product) {
             ?>
             <div class='menu-items'>
+            <img class='product-img' src='<?php echo $product['img']; ?>' alt='<?php echo $product['productnaam']; ?>'
+                    style='max-width: 400px;'>
                 <div class='product-container'>
                     <h2>
                         <?php echo $product['productnaam']; ?>

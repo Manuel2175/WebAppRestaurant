@@ -8,7 +8,7 @@
     <h1>winkelmandje</h1>
     </div>
 <?php
-require('winkelmandjedisplay');
+require('winkelmandjedisplay.php');
 ?>
 </main>
 <?php
