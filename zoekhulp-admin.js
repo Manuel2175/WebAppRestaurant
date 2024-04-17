@@ -1,37 +1,20 @@
 $(document).ready(function () {
-  function searchProducts(query) {
+  function search(query) {
     $.ajax({
-      url: "search-admin.php",
+      url: query ? "search-admin.php" : "admin-items.php",
       method: "POST",
-      data: { query: query },
+      data: query ? { query: query } : {},
       success: function (data) {
         $("#searchResults").fadeOut(100, function () {
-          // Fade out the search results container
-          $(this).html(data).fadeIn(200); // Update the content and fade it back in
+          $(this).html(data).fadeIn(200);
         });
       },
     });
   }
 
   $("#searchInput").on("keyup", function () {
-    var query = $(this).val().trim(); // Trim whitespace
-    if (query.length > 0) {
-      searchProducts(query);
-    } else {
-      // If search input is empty, fetch all products
-      $.ajax({
-        url: "admin-items.php", // Replace "fetch-all-products.php" with the actual URL to fetch all products
-        method: "GET",
-        success: function (data) {
-          $("#searchResults").fadeOut(100, function () {
-            // Fade out the search results container
-            $(this).html(data).fadeIn(200); // Update the content and fade it back in
-          });
-        },
-      });
-    }
+    search($(this).val().trim());
   });
 
-  // Initial call to load all products when the page loads
   $("#searchInput").trigger("keyup");
 });

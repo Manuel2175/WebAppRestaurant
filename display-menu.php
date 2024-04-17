@@ -88,24 +88,39 @@ function displayProducts($products)
 function displayProductId($products)
 {
     ?>
-    <section class='menu-container-admin'>
+    <section class='menu-container'>
         <?php
         foreach ($products as $product) {
             ?>
-            <div class='menu-itemss'>
+            <div class='menu-items'>
+                <form method="post" action="updateimg.php">
+                    <input class="update" type="text" name="afbeelding" value="<?php echo $product['img']; ?>">
+                    <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+                    <button type="submit" class="bestel-nu">Update img path</button>
+                </form>
+
                 <div class='product-container'>
-                    <h2>
-                        <?php echo $product['productnaam']; ?>
-                    </h2>
-                    <p>Id:
-                        <?php echo $product['id']; ?>
-                    </p>
+                    <form method="post" action="update.php">
+                        <input class="update" type="text" name="categorie" value="<?php echo $product['categorie']; ?>">
+                        <input class="update" type="text" name="productnaam" value="<?php echo $product['productnaam']; ?>">
+                        <textarea class="update" name="beschrijving"><?php echo $product['beschrijving']; ?></textarea>
+                        <input class="update" type="text" name="prijs" value="<?php echo $product['prijs']; ?>">
+                        <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+                        <button type="submit" class="bestel-nu">update</button>
+                    </form>
+
+
+                    <form method="get" action="verwijder.php">
+                        <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+                        <button type="submit" class="bestel-nu">verwijder</button>
+                    </form>
                 </div>
             </div>
             <?php
         }
         ?>
     </section>
+
     <?php
 }
 ?>
@@ -118,7 +133,7 @@ function displayProductsCard($products)
         foreach ($products as $product) {
             ?>
             <div class='menu-items'>
-            <img class='product-img' src='<?php echo $product['img']; ?>' alt='<?php echo $product['productnaam']; ?>'
+                <img class='product-img' src='<?php echo $product['img']; ?>' alt='<?php echo $product['productnaam']; ?>'
                     style='max-width: 400px;'>
                 <div class='product-container'>
                     <h2>

@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   $("#searchInput").on("keyup", function () {
     var query = $(this).val();
